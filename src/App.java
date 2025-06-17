@@ -14,5 +14,13 @@ public class App {
         ab.insert(14);
         ab.insert(19);
         ab.imprimirArbol();
+        System.out.println();
+
+        int valorABuscar = 23;
+        if (ab.buscar(valorABuscar)) {
+            System.out.println("Encontrado: " + valorABuscar);
+        } else {
+            System.out.println("No encontró el valor: " + valorABuscar);
+        }
     }
 }

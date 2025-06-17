@@ -39,5 +39,23 @@ public class ArbolBinario {
         imprimir(root);
     }
 
+    public boolean buscar (int value) {
+        return buscarRec(root, value);
+    }
+
+    public boolean buscarRec(Node node, int value){
+        if (node == null) {
+            return false; 
+    }
+    if (value == node.getValue()) {
+        return true;
+    }
+    if (value < node.getValue()) {
+        return buscarRec(node.getLeft(), value);
+    } else {
+        return buscarRec(node.getRight(), value);
+    }
+    }
+
 
 }
